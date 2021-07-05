@@ -11,7 +11,6 @@ RUN apk -U upgrade && apk add \
     && mkdir /weechat \
     && addgroup -g 9000 -S weechat \
     && adduser -u 9000 -D -S -h /weechat -s /sbin/nologin -G weechat weechat \
-    && chown -R weechat:weechat /weechat \
     && rm -rf /var/cache/apk/* \
     && rm -rf /tmp/*
 
