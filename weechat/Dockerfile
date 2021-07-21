@@ -10,6 +10,7 @@ ADD run.sh /
 RUN apk -U upgrade && apk add \
     weechat \
     su-exec \
+    shadow \
     && mkdir /weechat \
     && addgroup -g $IRC_GID -S weechat \
     && adduser -u $IRC_UID -D -S -h /weechat -s /sbin/nologin -G weechat weechat \
